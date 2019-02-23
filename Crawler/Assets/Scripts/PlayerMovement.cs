@@ -8,10 +8,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     public float movespeed;
     public bool moveRight = true, moveLeft = true, moveUp = true, moveDown = true;
+    public int health;
     // Start is called before the first frame update
     void Start()
     {
-
+        DontDestroyOnLoad(this);
+        health = 100;
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
         {
             position.x += movespeed;
             this.transform.position = position;
+            print(health);
         }
         if (Input.GetKey("s") && moveDown)
         {
@@ -64,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (collision.name.Contains("Right") && !collision.name.Contains("Closed"))
             {
-
+                
             }
             if (collision.name.Contains("Left") && !collision.name.Contains("Closed"))
             {
@@ -72,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (collision.name.Contains("Top") && !collision.name.Contains("Closed"))
             {
-
+                health -= 100;
             }
             if (collision.name.Contains("Bottom") && !collision.name.Contains("Closed"))
             {
