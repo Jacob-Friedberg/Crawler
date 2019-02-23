@@ -6,33 +6,33 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
     public float movespeed;
-    public bool onWall;
+    public bool moveRight = true, moveLeft = true, moveUp = true, moveDown = true;
     // Start is called before the first frame update
     void Start()
     {
-        onWall = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 position = this.transform.position;
-        if (Input.GetKey("d"))
+        if (Input.GetKey("d") && moveRight)
         {
             position.x += movespeed;
             this.transform.position = position;
         }
-        if (Input.GetKey("s"))
+        if (Input.GetKey("s") && moveDown)
         {
             position.y -= movespeed;
             this.transform.position = position;
         }
-        if (Input.GetKey("w"))
+        if (Input.GetKey("w") && moveUp)
         {
             position.y += movespeed;
             this.transform.position = position;
         }
-        if (Input.GetKey("a"))
+        if (Input.GetKey("a") && moveLeft)
         {
             position.x -= movespeed;
             this.transform.position = position;
@@ -43,27 +43,21 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.name.Contains("Wall"))
         {
-            print("fuck)");
-            Vector3 position = this.transform.position;
-            if (Input.GetKey("d"))
+            if (collision.name.Contains("right"))
             {
-                position.x -= movespeed;
-                this.transform.position = position;
+
             }
-            if (Input.GetKey("s"))
+            if (collision.name.Contains("left"))
             {
-                position.y += movespeed;
-                this.transform.position = position;
+
             }
-            if (Input.GetKey("w"))
+            if (collision.name.Contains("bottom"))
             {
-                position.y -= movespeed;
-                this.transform.position = position;
+
             }
-            if (Input.GetKey("a"))
+            if (collision.name.Contains("top"))
             {
-                position.x += movespeed;
-                this.transform.position = position;
+
             }
         }
     }
