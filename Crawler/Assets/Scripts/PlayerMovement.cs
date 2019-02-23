@@ -43,21 +43,43 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.name.Contains("Wall"))
         {
-            if (collision.name.Contains("right"))
+            if (collision.name.Contains("Right"))
             {
-
+                moveRight = false;
             }
-            if (collision.name.Contains("left"))
+            if (collision.name.Contains("Left"))
             {
-
+                moveLeft = false;
             }
-            if (collision.name.Contains("bottom"))
+            if (collision.name.Contains("Bottom"))
             {
-
+                moveDown = false;
             }
-            if (collision.name.Contains("top"))
+            if (collision.name.Contains("Top"))
             {
-
+                moveUp = false;
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.name.Contains("Wall"))
+        {
+            if (collision.name.Contains("Right"))
+            {
+                moveRight = true;
+            }
+            if (collision.name.Contains("Left"))
+            {
+                moveLeft = true;
+            }
+            if (collision.name.Contains("Bottom"))
+            {
+                moveDown = true;
+            }
+            if (collision.name.Contains("Top"))
+            {
+                moveUp = true;
             }
         }
     }
