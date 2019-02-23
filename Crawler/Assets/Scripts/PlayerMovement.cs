@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -40,6 +41,46 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name.Contains("Wall"))
+        {
+            if (collision.name.Contains("Right"))
+            {
+                moveRight = false;
+            }
+            if (collision.name.Contains("Left"))
+            {
+                moveLeft = false;
+            }
+            if (collision.name.Contains("Bottom"))
+            {
+                moveDown = false;
+            }
+            if (collision.name.Contains("Top"))
+            {
+                moveUp = false;
+            }
+        } else if (collision.name.Contains("Door"))
+        {
+            if (collision.name.Contains("Right") && !collision.name.Contains("Closed"))
+            {
+
+            }
+            if (collision.name.Contains("Left") && !collision.name.Contains("Closed"))
+            {
+
+            }
+            if (collision.name.Contains("Top") && !collision.name.Contains("Closed"))
+            {
+
+            }
+            if (collision.name.Contains("Bottom") && !collision.name.Contains("Closed"))
+            {
+
+            }
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.name.Contains("Wall"))
         {
