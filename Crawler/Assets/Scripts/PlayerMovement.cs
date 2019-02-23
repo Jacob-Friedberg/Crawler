@@ -44,7 +44,27 @@ public class PlayerMovement : MonoBehaviour
         if (collision.name.Contains("Wall"))
         {
             print("fuck)");
-            //print(collision.transform.);
+            Vector3 position = this.transform.position;
+            if (Input.GetKey("d"))
+            {
+                position.x -= movespeed;
+                this.transform.position = position;
+            }
+            if (Input.GetKey("s"))
+            {
+                position.y += movespeed;
+                this.transform.position = position;
+            }
+            if (Input.GetKey("w"))
+            {
+                position.y -= movespeed;
+                this.transform.position = position;
+            }
+            if (Input.GetKey("a"))
+            {
+                position.x += movespeed;
+                this.transform.position = position;
+            }
         }
     }
 }
