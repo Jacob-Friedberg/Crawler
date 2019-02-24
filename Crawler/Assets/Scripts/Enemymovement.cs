@@ -6,6 +6,8 @@ public class Enemymovement : MonoBehaviour
 {
     public float speed;
     public Transform target;
+
+    public GameObject exit;
     public int health;
     // Start is called before the first frame update
     void Start()
@@ -21,14 +23,16 @@ public class Enemymovement : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, target.position, step);
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if(collision.gameObject.tag.Contains("Weapon")){
+        if(col.gameObject.name.Contains("Arrow")){
             health--;
         }
         if(health <= 0){
+            if(this.name.Contains("Ogre")){
+                Instantiate(exit, new Vector2(5.3f, 2.4f), Quaternion.identity);
+            }
             Destroy(this.gameObject);
         }
-
     }
 }

@@ -29,7 +29,7 @@ PrefabInstance:
     - target: {fileID: 3139886822999518366, guid: 92b29c0463130394dbbd9b42a848c74e,
         type: 3}
       propertyPath: m_Name
-      value: Ogre
+      value: OgreVariant
       objectReference: {fileID: 0}
     - target: {fileID: 3139886822999518362, guid: 92b29c0463130394dbbd9b42a848c74e,
         type: 3}
@@ -102,6 +102,12 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.26
       objectReference: {fileID: 0}
+    - target: {fileID: 3139886822999518367, guid: 92b29c0463130394dbbd9b42a848c74e,
+        type: 3}
+      propertyPath: exit
+      value: 
+      objectReference: {fileID: 4940244775086597430, guid: 5577f94424a33e14fa2dc2869b5b0234,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92b29c0463130394dbbd9b42a848c74e, type: 3}
 --- !u!1 &8052705680306308109 stripped

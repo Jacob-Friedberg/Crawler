@@ -61,30 +61,37 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print(collision.gameObject.tag);
         if (collision.gameObject.tag.Contains("Enemy"))
         {
-            print(collision.gameObject.name);
             if (collision.gameObject.name.Contains("Ogre"))
             {
                 health -= 50;
+                print(health);
             }
             else if (collision.gameObject.name.Contains("Watcher"))
             {
                 health -= 12;
+                print(health);
             }
             else 
             {
                 health -= 2;
+                print(health);
             }
             if (health < 0)
             {
                 SceneManager.LoadScene("GameOver");
                 Destroy(this.gameObject);
             }
+            
+        }
+        if (collision.name.Contains("Heart"))
+        {
+            health += 70;
+            Destroy(collision.gameObject);
             print(health);
         }
-        print("not hello");
+
         if (collision.name.Contains("Door"))
         {
             if (collision.name.Contains("Right") && !collision.name.Contains("Closed"))
@@ -177,11 +184,6 @@ public class PlayerMovement : MonoBehaviour
                 moveUp = true;
             }
         }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        print("hello");
-
     }
     static public void startGame()
     {
