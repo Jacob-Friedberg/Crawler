@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public int attack;
     private static bool start = false;
     
-    public Vector3 startLeft = new Vector3(-5.62f, 0.0f, 1.76f), startRight = new Vector3(5.62f, 0.0f, 1.6f), startTop = new Vector3(0.0f, 2.37f, 1.76f), startBottom = new Vector3(0.0f, -2.38f, 1.76f);
+    public Vector3 startLeft = new Vector3(-4.8f, 0.0f, 1.7f), startRight = new Vector3(4.8f, 0.0f, 1.6f), startTop = new Vector3(0.0f, 2.37f, 1.76f), startBottom = new Vector3(0.0f, -2.38f, 1.76f);
     // Start is called before the first frame update
     void Start()
     {
@@ -75,18 +75,34 @@ public class PlayerMovement : MonoBehaviour
             if (collision.name.Contains("Right") && !collision.name.Contains("Closed"))
             {
                 this.transform.position = startLeft;
+                moveRight = true;
+                moveLeft = true;
+                moveUp = true;
+                moveDown = true;
             }
             if (collision.name.Contains("Left") && !collision.name.Contains("Closed"))
             {
                 this.transform.position = startRight;
+                moveRight = true;
+                moveLeft = true;
+                moveUp = true;
+                moveDown = true;
             }
             if (collision.name.Contains("Top") && !collision.name.Contains("Closed"))
             {
                 this.transform.position = startBottom;
+                moveRight = true;
+                moveLeft = true;
+                moveUp = true;
+                moveDown = true;
             }
             if (collision.name.Contains("Bottom") && !collision.name.Contains("Closed"))
             {
                 this.transform.position = startTop;
+                moveRight = true;
+                moveLeft = true;
+                moveUp = true;
+                moveDown = true;
             }
         }
     }
