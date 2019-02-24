@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Enemymovement : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed;
     public Transform target;
+    public int health;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +16,19 @@ public class Enemymovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        target = GameObject.FindGameObjectWithTag("Player").transform; 
         float step = speed *Time.deltaTime;
-        target = GameObject.FindGameObjectWithTag("Player").transform; //push
         transform.position = Vector2.MoveTowards(transform.position, target.position, step);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == "Arrow"){
+            health--;
+        }
+        if(health <= 0){
+            Destroy(this.gameObject);
+        }
+
     }
 }

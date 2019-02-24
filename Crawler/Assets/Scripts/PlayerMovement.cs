@@ -112,15 +112,19 @@ public class PlayerMovement : MonoBehaviour
                 moveUp = true;
                 moveDown = true;
             }
+
+            if(collision.name.Contains("Boss") && hasKey)
+            {
+                print("im here");
+                SceneManager.LoadScene("Level1-4");
+
+            }
         }
         else if (collision.name.Contains("Key"))
         {
             hasKey = true;
         }
-         else if (collision.name.Contains("Boss"))
-        {
-            hasKey = true;
-        }
+
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
