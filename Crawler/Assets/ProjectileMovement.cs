@@ -17,6 +17,6 @@ public class ProjectileMovement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(this);
+        Destroy(this); //test
     }
 }
