@@ -990,7 +990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
-  timeneeded: 0
+  timetokill: 0
 --- !u!1001 &1363129461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1065,6 +1065,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5577f94424a33e14fa2dc2869b5b0234, type: 3}
+--- !u!1 &1492820845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4940244775086597430, guid: 5577f94424a33e14fa2dc2869b5b0234,
+    type: 3}
+  m_PrefabInstance: {fileID: 1363129461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1750016596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,12 +1386,12 @@ PrefabInstance:
     - target: {fileID: 8052705680306308105, guid: 5269e87cb39fc1149920ac91e2eb1eaf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.122867346
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 8052705680306308105, guid: 5269e87cb39fc1149920ac91e2eb1eaf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9913114
+      value: 1.93
       objectReference: {fileID: 0}
     - target: {fileID: 8052705680306308105, guid: 5269e87cb39fc1149920ac91e2eb1eaf,
         type: 3}
@@ -1435,13 +1441,18 @@ PrefabInstance:
     - target: {fileID: 8052705680306308108, guid: 5269e87cb39fc1149920ac91e2eb1eaf,
         type: 3}
       propertyPath: speed
-      value: 1.8
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 8052705680306308108, guid: 5269e87cb39fc1149920ac91e2eb1eaf,
         type: 3}
       propertyPath: health
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 8052705680306308108, guid: 5269e87cb39fc1149920ac91e2eb1eaf,
+        type: 3}
+      propertyPath: exit
+      value: 
+      objectReference: {fileID: 1492820845}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5269e87cb39fc1149920ac91e2eb1eaf, type: 3}
 --- !u!1 &1926178107 stripped
@@ -1463,4 +1474,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
-  timeneeded: 0
+  timetokill: 0
