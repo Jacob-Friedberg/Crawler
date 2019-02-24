@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireballMovement : MonoBehaviour
 {
-    private Vector3 targetloc;
+    private Vector3 direction;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +16,8 @@ public class FireballMovement : MonoBehaviour
     {
         
     }
-    public void SetTarget(Vector3 target)
+    public void SetTarget(Vector3 mydir)
     {
-
+        direction = mydir;
     }
 }

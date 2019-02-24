@@ -31,23 +31,23 @@ public class PlayerMovement : MonoBehaviour
         if (start)
         {
             Vector3 position = this.transform.position;
-            if (Input.GetKey("d") && moveRight)
+            if ((Input.GetKey("d") && moveRight) || Input.acceleration.x > 0)
             {
                 anim.ResetTrigger("MoveLeft");
                 position.x += movespeed;
                 this.transform.position = position;
             }
-            if (Input.GetKey("s") && moveDown)
+            if ((Input.GetKey("s") && moveDown) || Input.acceleration.y < 0)
             {
                 position.y -= movespeed;
                 this.transform.position = position;
             }
-            if (Input.GetKey("w") && moveUp)
+            if ((Input.GetKey("w") && moveUp) || Input.acceleration.y > 0)
             {
                 position.y += movespeed;
                 this.transform.position = position;
             }
-            if (Input.GetKey("a") && moveLeft)
+            if ((Input.GetKey("a") && moveLeft) || Input.acceleration.x < 0)
             {
                 position.x -= movespeed;
                 this.transform.position = position;
@@ -58,8 +58,8 @@ public class PlayerMovement : MonoBehaviour
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
                 if (start)
                     this.gameObject.GetComponent<AudioSource>().Play();
-            }
-            transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
+            } 
+
 
         }
     }

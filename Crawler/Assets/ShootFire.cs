@@ -21,17 +21,18 @@ public class ShootFire : MonoBehaviour
         {
             if (alt)
             {
-                Instantiate(projectile, left, Quaternion.identity);
-                Instantiate(projectile, right, Quaternion.identity);
-                Instantiate(projectile, down, Quaternion.identity);
-                Instantiate(projectile, up, Quaternion.identity);
+                Instantiate(projectile, this.transform.position, Quaternion.identity);
+                Instantiate(projectile, this.transform.position, Quaternion.identity);
+                Instantiate(projectile, this.transform.position, Quaternion.identity);
+                Instantiate(projectile, this.transform.position, Quaternion.identity);
             } else
             {
-                Instantiate(projectile, upRight, Quaternion.identity);
-                Instantiate(projectile, upLeft, Quaternion.identity);
-                Instantiate(projectile, downLeft, Quaternion.identity);
-                Instantiate(projectile, downRight, Quaternion.identity);
+                Instantiate(projectile, this.transform.position, Quaternion.identity);
+                Instantiate(projectile, this.transform.position, Quaternion.identity);
+                Instantiate(projectile, this.transform.position, Quaternion.identity);
+                Instantiate(projectile, this.transform.position, Quaternion.identity);
             }
+            wait = true;
         } else
         {
             wait = false;
