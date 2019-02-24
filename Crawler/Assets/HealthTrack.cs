@@ -10,10 +10,6 @@ public class HealthTrack : MonoBehaviour
     void Start()
     {
         GameObject.DontDestroyOnLoad(this);
-        int health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().getHealth();
-        mytext = "Health: \n " + health;
-        Text text = this.GetComponent<Text>();
-        text.text = mytext;
     }
 
     // Update is called once per frame
