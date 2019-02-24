@@ -136,6 +136,7 @@ public class PlayerMovement : MonoBehaviour
         else if (collision.name.Contains("Key"))
         {
             hasKey = true;
+            Destroy(collision.gameObject);
         }
         
 
