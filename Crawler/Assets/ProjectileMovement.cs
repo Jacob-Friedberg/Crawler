@@ -18,8 +18,10 @@ public class ProjectileMovement : MonoBehaviour
         position = Vector3.MoveTowards(position, targetloc, Time.deltaTime * 10);
         this.transform.position = position;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(this); //test
+        if(!collision.name.Contains("Player")){
+            Destroy(this.gameObject); //test
+        }
     }
 }
