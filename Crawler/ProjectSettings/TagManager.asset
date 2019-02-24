@@ -8,6 +8,9 @@ TagManager:
   - Wall
   - Weapon
   - Enemy
+  - Diamond
+  - Triangle
+  - Circle
   layers:
   - Default
   - TransparentFX
