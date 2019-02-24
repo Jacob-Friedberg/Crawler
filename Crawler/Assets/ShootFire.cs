@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ShootFire : MonoBehaviour
 {
-    private Vector3 left = new Vector3(-8, 0), right = new Vector3(8, 0), up = new Vector3(0, 4), down = new Vector3(0, -4);
-    private Vector3 upRight = new Vector3(7.4f, 4.3f), downRight = new Vector3(7.4f, -4.3f), downLeft = new Vector3(-7.4f, -4.3f), upLeft = new Vector3(-7.4f, 4.3f);
+   
     public GameObject projectile;
     private bool alt = true, wait = false;
+    private float timeelapsed = Time.time;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,33 +19,39 @@ public class ShootFire : MonoBehaviour
     {
         if (!wait)
         {
-            if (alt)
+            /*if (alt)
             {
-                projectile.GetComponent<FireballMovement>().SetTarget(down);
+                projectile.GetComponent<FireballMovement>().SetTarget(4);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
-                projectile.GetComponent<FireballMovement>().SetTarget(left);
+                projectile.GetComponent<FireballMovement>().SetTarget(1);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
-                projectile.GetComponent<FireballMovement>().SetTarget(right);
+                projectile.GetComponent<FireballMovement>().SetTarget(2);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
-                projectile.GetComponent<FireballMovement>().SetTarget(up);
+                projectile.GetComponent<FireballMovement>().SetTarget(3);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
-                
+                alt = false;
             } else
             {
-                projectile.GetComponent<FireballMovement>().SetTarget(upRight);
+                projectile.GetComponent<FireballMovement>().SetTarget(5);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
-                projectile.GetComponent<FireballMovement>().SetTarget(downLeft);
+                projectile.GetComponent<FireballMovement>().SetTarget(6);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
-                projectile.GetComponent<FireballMovement>().SetTarget(downRight);
+                projectile.GetComponent<FireballMovement>().SetTarget(7);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
-                projectile.GetComponent<FireballMovement>().SetTarget(upLeft);
+                projectile.GetComponent<FireballMovement>().SetTarget(8);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
-                
-            }
+                alt = true;
+            }*/
+            projectile.GetComponent<FireballMovement>().SetTarget(0);
+            Instantiate(projectile, this.transform.position, Quaternion.identity);
             wait = true;
         } else
         {
-            wait = false;
+            if (Time.time - timeelapsed > 0.1f)
+            {
+                wait = false;
+                timeelapsed = Time.time;
+            }
         }
     }
 }
