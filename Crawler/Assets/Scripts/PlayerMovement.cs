@@ -31,10 +31,21 @@ public class PlayerMovement : MonoBehaviour
         if (start)
         {
             Vector3 position = this.transform.position;
+            if (Input.acceleration.x > 0 && moveRight)
+            {
+                anim.ResetTrigger("MoveLeft");
+                position.x += movespeed;
+                this.transform.position = position;
+            }
             if ((Input.GetKey("d") && moveRight) || (Input.acceleration.x > 0 && moveRight))
             {
                 anim.ResetTrigger("MoveLeft");
                 position.x += movespeed;
+                this.transform.position = position;
+            }
+            if (Input.acceleration.y < 0 && moveDown)
+            {
+                position.y -= movespeed;
                 this.transform.position = position;
             }
             if ((Input.GetKey("s") && moveDown) || (Input.acceleration.y < 0 && moveDown))
@@ -42,10 +53,21 @@ public class PlayerMovement : MonoBehaviour
                 position.y -= movespeed;
                 this.transform.position = position;
             }
+            if (Input.acceleration.y > 0 && moveUp)
+            {
+                position.y += movespeed;
+                this.transform.position = position;
+            }
             if ((Input.GetKey("w") && moveUp) || (Input.acceleration.y > 0 && moveUp))
             {
                 position.y += movespeed;
                 this.transform.position = position;
+            }
+            if (Input.acceleration.x < 0 && moveLeft)
+            {
+                position.x -= movespeed;
+                this.transform.position = position;
+                anim.SetTrigger("MoveLeft");
             }
             if ((Input.GetKey("a") && moveLeft) || (Input.acceleration.x < 0 && moveLeft))
             {
