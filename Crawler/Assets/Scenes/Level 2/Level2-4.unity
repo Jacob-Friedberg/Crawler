@@ -714,22 +714,22 @@ PrefabInstance:
     - target: {fileID: 3330350615406950231, guid: 1cb1a9b07a7b8d9488bfd3ff49693335,
         type: 3}
       propertyPath: m_Name
-      value: OpenDoor
+      value: OpenLeftDoor
       objectReference: {fileID: 0}
     - target: {fileID: 3330350615406950217, guid: 1cb1a9b07a7b8d9488bfd3ff49693335,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.05
+      value: 6.835
       objectReference: {fileID: 0}
     - target: {fileID: 3330350615406950217, guid: 1cb1a9b07a7b8d9488bfd3ff49693335,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.13
+      value: -0.131
       objectReference: {fileID: 0}
     - target: {fileID: 3330350615406950217, guid: 1cb1a9b07a7b8d9488bfd3ff49693335,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.99
+      value: 2.998
       objectReference: {fileID: 0}
     - target: {fileID: 3330350615406950217, guid: 1cb1a9b07a7b8d9488bfd3ff49693335,
         type: 3}
@@ -779,7 +779,7 @@ PrefabInstance:
     - target: {fileID: 3330350615406950217, guid: 1cb1a9b07a7b8d9488bfd3ff49693335,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.62522
+      value: 3.280548
       objectReference: {fileID: 0}
     - target: {fileID: 2749502020648294637, guid: 1cb1a9b07a7b8d9488bfd3ff49693335,
         type: 3}
@@ -1434,6 +1434,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300402, guid: 743c61b641daf264d99ccb56f05ec388,
         type: 3}
+    - target: {fileID: 3139886822999518360, guid: 92b29c0463130394dbbd9b42a848c74e,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139886822999518360, guid: 92b29c0463130394dbbd9b42a848c74e,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3139886822999518367, guid: 92b29c0463130394dbbd9b42a848c74e,
         type: 3}
       propertyPath: health
