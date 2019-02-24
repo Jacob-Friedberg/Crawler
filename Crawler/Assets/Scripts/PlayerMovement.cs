@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private static bool start = false;
     public bool hasKey;
     private Animator anim;
+    public GameObject projectile;
     public Vector3 startLeft = new Vector3(-4.8f, 0.0f, 1.7f), startRight = new Vector3(4.8f, 0.0f, 1.6f), startTop = new Vector3(0.0f, 2.37f, 1.76f), startBottom = new Vector3(0.0f, -2.38f, 1.76f);
     // Start is called before the first frame update
     void Start()
@@ -53,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (Input.GetMouseButtonDown(0))
             {
-
+                Instantiate(projectile, this.transform.position, Quaternion.identity);
             }
         }
     }

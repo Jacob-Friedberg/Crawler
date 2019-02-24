@@ -103,6 +103,8 @@ MonoBehaviour:
   health: 0
   attack: 0
   hasKey: 0
+  projectile: {fileID: 8981618609441000156, guid: 24e130535fa85b64697b086304d26822,
+    type: 3}
   startLeft: {x: -5.62, y: 0, z: 1.76}
   startRight: {x: 5.62, y: 0, z: 1.76}
   startTop: {x: 0, y: 2.37, z: 1.76}
