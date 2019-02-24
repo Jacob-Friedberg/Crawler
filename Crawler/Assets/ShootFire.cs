@@ -21,16 +21,26 @@ public class ShootFire : MonoBehaviour
         {
             if (alt)
             {
+                projectile.GetComponent<FireballMovement>().SetTarget(down);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
+                projectile.GetComponent<FireballMovement>().SetTarget(left);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
+                projectile.GetComponent<FireballMovement>().SetTarget(right);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
+                projectile.GetComponent<FireballMovement>().SetTarget(up);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
+                
             } else
             {
+                projectile.GetComponent<FireballMovement>().SetTarget(upRight);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
+                projectile.GetComponent<FireballMovement>().SetTarget(downLeft);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
+                projectile.GetComponent<FireballMovement>().SetTarget(downRight);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
+                projectile.GetComponent<FireballMovement>().SetTarget(upLeft);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
+                
             }
             wait = true;
         } else
