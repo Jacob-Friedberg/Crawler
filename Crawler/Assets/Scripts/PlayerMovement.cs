@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.acceleration.x > 0 && moveRight)
             {
                 anim.ResetTrigger("MoveLeft");
-                position.x += movespeed;
+                position.x += movespeed * 2;
                 this.transform.position = position;
             }
             if ((Input.GetKey("d") && moveRight) || (Input.acceleration.x > 0 && moveRight))
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (Input.acceleration.y < 0 && moveDown)
             {
-                position.y -= movespeed;
+                position.y -= movespeed * 2;
                 this.transform.position = position;
             }
             if ((Input.GetKey("s") && moveDown) || (Input.acceleration.y < 0 && moveDown))
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (Input.acceleration.y > 0 && moveUp)
             {
-                position.y += movespeed;
+                position.y += movespeed * 2;
                 this.transform.position = position;
             }
             if ((Input.GetKey("w") && moveUp) || (Input.acceleration.y > 0 && moveUp))
@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (Input.acceleration.x < 0 && moveLeft)
             {
-                position.x -= movespeed;
+                position.x -= movespeed * 2;
                 this.transform.position = position;
                 anim.SetTrigger("MoveLeft");
             }
