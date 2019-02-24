@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public int health;
     public int attack;
     private static bool start = false;
-    
+    public bool hasKey;
     public Vector3 startLeft = new Vector3(-4.8f, 0.0f, 1.7f), startRight = new Vector3(4.8f, 0.0f, 1.6f), startTop = new Vector3(0.0f, 2.37f, 1.76f), startBottom = new Vector3(0.0f, -2.38f, 1.76f);
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
         DontDestroyOnLoad(this);
         health = 100;
+        hasKey = false;
     }
 
     // Update is called once per frame
@@ -105,6 +106,11 @@ public class PlayerMovement : MonoBehaviour
                 moveDown = true;
             }
         }
+        else if (collision.name.Contains("Key"))
+        {
+            hasKey = true;
+        }
+
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
