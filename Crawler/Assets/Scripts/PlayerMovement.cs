@@ -169,6 +169,12 @@ public class PlayerMovement : MonoBehaviour
                 moveDown = true;
             }
 
+            if(collision.name.Contains("booshk") && hasKey)
+            {
+                SceneManager.LoadScene("Level4-6");
+                this.transform.position = startBottom;
+            }
+
             if(collision.name.Contains("Boss") && hasKey)
             {
                 SceneManager.LoadScene("Level1-4");
