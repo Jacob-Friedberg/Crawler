@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3469797112091303036}
   - component: {fileID: 3469797112091303011}
   - component: {fileID: 4340629583348726560}
-  - component: {fileID: 1745111534598855296}
+  - component: {fileID: 2428798135876239013}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -153,7 +153,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!111 &1745111534598855296
+--- !u!111 &2428798135876239013
 Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,9 +162,9 @@ Animation:
   m_GameObject: {fileID: 3469797112091303008}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: 3e003cf7fa4ee214db737e9caf9d5318, type: 2}
   m_Animations: []
   m_WrapMode: 0
-  m_PlayAutomatically: 0
+  m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
