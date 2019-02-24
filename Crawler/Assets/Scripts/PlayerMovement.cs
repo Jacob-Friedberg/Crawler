@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float movespeed;
     public bool moveRight = true, moveLeft = true, moveUp = true, moveDown = true;
     public int health;
+    public Vector3 startLeft = new Vector3(-5.62f, 0.0f, 1.76f), startRight = new Vector3(5.62f, 0.0f, 1.76f), startTop = new Vector3(0.0f, 2.37f, 1.76f), startBottom = new Vector3(0.0f, -2.38f, 1.76f);
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
         {
             position.x += movespeed;
             this.transform.position = position;
-            print(health);
         }
         if (Input.GetKey("s") && moveDown)
         {
@@ -67,19 +67,19 @@ public class PlayerMovement : MonoBehaviour
         {
             if (collision.name.Contains("Right") && !collision.name.Contains("Closed"))
             {
-                
+                this.transform.position = startLeft;
             }
             if (collision.name.Contains("Left") && !collision.name.Contains("Closed"))
             {
-
+                this.transform.position = startRight;
             }
             if (collision.name.Contains("Top") && !collision.name.Contains("Closed"))
             {
-                health -= 100;
+                this.transform.position = startBottom;
             }
             if (collision.name.Contains("Bottom") && !collision.name.Contains("Closed"))
             {
-
+                this.transform.position = startTop;
             }
         }
     }
