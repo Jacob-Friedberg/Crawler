@@ -6,7 +6,6 @@ public class Enemymovement : MonoBehaviour
 {
     public float speed;
     public Transform target;
-
     public GameObject exit;
     public int health;
     // Start is called before the first frame update
@@ -29,10 +28,10 @@ public class Enemymovement : MonoBehaviour
             health--;
         }
         if(health <= 0){
-            if(this.name.Contains("Ogre")){
+            gameObject.GetComponent<AudioSource>().Play();
+            if (this.name.Contains("Ogre")){
                 Instantiate(exit, new Vector2(5.3f, 2.4f), Quaternion.identity);
-            }
-            this.gameObject.GetComponent<AudioSource>().Play();
+            }   
             Destroy(this.gameObject);
         }
     }
