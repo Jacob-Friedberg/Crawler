@@ -51,6 +51,10 @@ public class PlayerMovement : MonoBehaviour
                 this.transform.position = position;
                 anim.SetTrigger("MoveLeft");
             }
+            if (Input.GetMouseButtonDown(0))
+            {
+
+            }
         }
     }
 
