@@ -223,7 +223,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100856890}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5790809fd5d66f24b9096048e699c56e, type: 3}
   m_Name: 
@@ -895,7 +895,7 @@ PrefabInstance:
     - target: {fileID: 3330350615406950231, guid: 06c8a6bcff71dd64c981bbcf55e6e2ff,
         type: 3}
       propertyPath: m_Name
-      value: ClosedRightDoorAsWall
+      value: ClosedLeftDoorAsWall
       objectReference: {fileID: 0}
     - target: {fileID: 3330350615406950217, guid: 06c8a6bcff71dd64c981bbcf55e6e2ff,
         type: 3}
