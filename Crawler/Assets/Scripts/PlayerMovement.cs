@@ -12,14 +12,15 @@ public class PlayerMovement : MonoBehaviour
     public int attack;
     private static bool start = false;
     public bool hasKey;
+    private Animator anim;
     public Vector3 startLeft = new Vector3(-4.8f, 0.0f, 1.7f), startRight = new Vector3(4.8f, 0.0f, 1.6f), startTop = new Vector3(0.0f, 2.37f, 1.76f), startBottom = new Vector3(0.0f, -2.38f, 1.76f);
     // Start is called before the first frame update
     void Start()
     {
-
         DontDestroyOnLoad(this);
         health = 100;
         hasKey = false;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
             Vector3 position = this.transform.position;
             if (Input.GetKey("d") && moveRight)
             {
+                anim.ResetTrigger("MoveLeft");
                 position.x += movespeed;
                 this.transform.position = position;
             }
@@ -47,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 position.x -= movespeed;
                 this.transform.position = position;
+                anim.SetTrigger("MoveLeft");
             }
         }
     }
@@ -110,7 +113,10 @@ public class PlayerMovement : MonoBehaviour
         {
             hasKey = true;
         }
-
+         else if (collision.name.Contains("Boss"))
+        {
+            hasKey = true;
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
