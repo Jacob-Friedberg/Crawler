@@ -390,7 +390,7 @@ PrefabInstance:
     - target: {fileID: 3330350615406950231, guid: 41d09d2c3ab5fde4f910b6a7385ff2fd,
         type: 3}
       propertyPath: m_Name
-      value: ClosedBoss4Door
+      value: ClosedDoorbooshkTop
       objectReference: {fileID: 0}
     - target: {fileID: 3330350615406950217, guid: 41d09d2c3ab5fde4f910b6a7385ff2fd,
         type: 3}

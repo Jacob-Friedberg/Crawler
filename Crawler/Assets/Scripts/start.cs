@@ -17,4 +17,12 @@ public class start : MonoBehaviour
         Application.Quit();
 
     }
+    public void backButton()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
+    public void creditsButton()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
