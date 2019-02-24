@@ -32,6 +32,7 @@ public class Enemymovement : MonoBehaviour
             if(this.name.Contains("Ogre")){
                 Instantiate(exit, new Vector2(5.3f, 2.4f), Quaternion.identity);
             }
+            this.gameObject.GetComponent<AudioSource>().Play();
             Destroy(this.gameObject);
         }
     }
