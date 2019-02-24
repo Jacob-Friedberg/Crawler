@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class ProjectileMovement : MonoBehaviour
 {
+    private Vector3 targetloc;
     // Start is called before the first frame update
     void Start()
     {
-        
+        targetloc = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 position = this.transform.position;
+        position = Vector3.MoveTowards(position, targetloc, Time.deltaTime * 10);
+        this.transform.position = position;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

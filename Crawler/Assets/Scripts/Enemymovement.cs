@@ -21,9 +21,11 @@ public class Enemymovement : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, target.position, step);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "Arrow"){
+        print("entered trigger");
+        if(collision.gameObject.tag.Contains("Weapon")){
+            print("Fuck)");
             health--;
         }
         if(health <= 0){
