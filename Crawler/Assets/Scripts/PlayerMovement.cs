@@ -55,6 +55,8 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
+                if (start)
+                    this.gameObject.GetComponent<AudioSource>().Play();
             }
         }
     }
@@ -81,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
             if (health < 0)
             {
                 SceneManager.LoadScene("GameOver");
+                start = false;
                 Destroy(this.gameObject);
             }
             
