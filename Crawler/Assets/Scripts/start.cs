@@ -8,6 +8,7 @@ public class start : MonoBehaviour
      public void startGame()
     {
         SceneManager.LoadScene("Level1");
+        PlayerMovement.startGame();
     }
 
     public void quitButton()

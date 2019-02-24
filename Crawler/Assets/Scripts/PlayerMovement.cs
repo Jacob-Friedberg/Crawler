@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour
     public bool moveRight = true, moveLeft = true, moveUp = true, moveDown = true;
     public int health;
     public int attack;
+    private static bool start = false;
     
     public Vector3 startLeft = new Vector3(-5.62f, 0.0f, 1.76f), startRight = new Vector3(5.62f, 0.0f, 1.76f), startTop = new Vector3(0.0f, 2.37f, 1.76f), startBottom = new Vector3(0.0f, -2.38f, 1.76f);
     // Start is called before the first frame update
     void Start()
     {
+
         DontDestroyOnLoad(this);
         health = 100;
     }
@@ -22,26 +24,29 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 position = this.transform.position;
-        if (Input.GetKey("d") && moveRight)
+        if (start)
         {
-            position.x += movespeed;
-            this.transform.position = position;
-        }
-        if (Input.GetKey("s") && moveDown)
-        {
-            position.y -= movespeed;
-            this.transform.position = position;
-        }
-        if (Input.GetKey("w") && moveUp)
-        {
-            position.y += movespeed;
-            this.transform.position = position;
-        }
-        if (Input.GetKey("a") && moveLeft)
-        {
-            position.x -= movespeed;
-            this.transform.position = position;
+            Vector3 position = this.transform.position;
+            if (Input.GetKey("d") && moveRight)
+            {
+                position.x += movespeed;
+                this.transform.position = position;
+            }
+            if (Input.GetKey("s") && moveDown)
+            {
+                position.y -= movespeed;
+                this.transform.position = position;
+            }
+            if (Input.GetKey("w") && moveUp)
+            {
+                position.y += movespeed;
+                this.transform.position = position;
+            }
+            if (Input.GetKey("a") && moveLeft)
+            {
+                position.x -= movespeed;
+                this.transform.position = position;
+            }
         }
     }
 
@@ -128,5 +133,9 @@ public class PlayerMovement : MonoBehaviour
                 moveUp = true;
             }
         }
+    }
+    static public void startGame()
+    {
+        start = true;
     }
 }
