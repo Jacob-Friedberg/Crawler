@@ -59,6 +59,8 @@ public class PlayerMovement : MonoBehaviour
                 if (start)
                     this.gameObject.GetComponent<AudioSource>().Play();
             }
+            transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
+
         }
     }
 
@@ -80,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
             } else if (collision.gameObject.name.Contains("Ghost"))
             {
                 health -= 10;
-                print(health);
+                print(health);  
             }
             else 
             {
