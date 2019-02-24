@@ -827,7 +827,7 @@ PrefabInstance:
     - target: {fileID: 3330350615406950231, guid: 06c8a6bcff71dd64c981bbcf55e6e2ff,
         type: 3}
       propertyPath: m_Name
-      value: BossDoor
+      value: BossDoorRight
       objectReference: {fileID: 0}
     - target: {fileID: 3330350615406950217, guid: 06c8a6bcff71dd64c981bbcf55e6e2ff,
         type: 3}
@@ -908,6 +908,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.47163093
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751493686912207376, guid: 06c8a6bcff71dd64c981bbcf55e6e2ff,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06c8a6bcff71dd64c981bbcf55e6e2ff, type: 3}
