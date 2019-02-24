@@ -18,13 +18,6 @@ public class BossDoor : MonoBehaviour
 
       private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerMovement player;
-        
-         if (collision.name == "Player" && player.hasKey)
-        {
-            print("this shit works");
 
-
-        }
     }
 }
