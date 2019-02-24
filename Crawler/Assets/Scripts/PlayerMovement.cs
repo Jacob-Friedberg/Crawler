@@ -83,6 +83,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 health -= 10;
                 print(health);  
+            } else if (collision.gameObject.name.Contains("Fire"))
+            {
+                health -= 5;
+                print(health);
             }
             else 
             {

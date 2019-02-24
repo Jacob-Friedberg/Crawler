@@ -19,7 +19,7 @@ public class FireballMovement : MonoBehaviour
     void Update()
     {
         Vector3 whereto = left;
-        /*switch (direction)
+        switch (direction)
         {
             case 1:
                 whereto = left;
@@ -45,14 +45,14 @@ public class FireballMovement : MonoBehaviour
             case 8:
                 whereto = downRight;
                 break;
-        }*/
+        }
         this.transform.position = Vector3.MoveTowards(this.transform.position, whereto, Time.deltaTime);
         if (this.transform.position == whereto && finished)
         {
             Destroy(this.gameObject);
-        } else if (this.transform.position == whereto)
+        } /*else if (this.transform.position == whereto)
         {
-           /* switch(direction)
+            switch(direction)
             {
                 case 1:
                     direction = 5;
@@ -66,9 +66,10 @@ public class FireballMovement : MonoBehaviour
                 case 4:
                     direction = 7;
                     break;
-            }*/
+            }
             finished = true;    
-        }
+
+        }*/
     }
     public void SetTarget(int mydir)
     {

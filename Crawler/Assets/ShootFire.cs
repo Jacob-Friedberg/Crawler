@@ -8,6 +8,7 @@ public class ShootFire : MonoBehaviour
     public GameObject projectile;
     private bool alt = true, wait = false;
     private float timeelapsed = Time.time;
+    public float timetokill;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class ShootFire : MonoBehaviour
     {
         if (!wait)
         {
-            /*if (alt)
+            if (alt)
             {
                 projectile.GetComponent<FireballMovement>().SetTarget(4);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
@@ -41,13 +42,13 @@ public class ShootFire : MonoBehaviour
                 projectile.GetComponent<FireballMovement>().SetTarget(8);
                 Instantiate(projectile, this.transform.position, Quaternion.identity);
                 alt = true;
-            }*/
+            }
             projectile.GetComponent<FireballMovement>().SetTarget(0);
             Instantiate(projectile, this.transform.position, Quaternion.identity);
             wait = true;
         } else
         {
-            if (Time.time - timeelapsed > 0.1f)
+            if (Time.time - timeelapsed > timetokill)
             {
                 wait = false;
                 timeelapsed = Time.time;
