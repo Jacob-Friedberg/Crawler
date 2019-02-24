@@ -7,12 +7,12 @@ public class ShootFire : MonoBehaviour
    
     public GameObject projectile;
     private bool alt = true, wait = false;
-    private float timeelapsed = Time.time;
+    private float timeelapsed;
     public float timetokill;
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeelapsed = Time.time;
     }
 
     // Update is called once per frame
