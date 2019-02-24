@@ -23,9 +23,7 @@ public class Enemymovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        print("entered trigger");
         if(collision.gameObject.tag.Contains("Weapon")){
-            print("Fuck)");
             health--;
         }
         if(health <= 0){
