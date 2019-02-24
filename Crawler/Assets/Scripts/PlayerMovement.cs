@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public float movespeed;
     public bool moveRight = true, moveLeft = true, moveUp = true, moveDown = true;
     public int health;
+    public int attack;
+    
     public Vector3 startLeft = new Vector3(-5.62f, 0.0f, 1.76f), startRight = new Vector3(5.62f, 0.0f, 1.76f), startTop = new Vector3(0.0f, 2.37f, 1.76f), startBottom = new Vector3(0.0f, -2.38f, 1.76f);
     // Start is called before the first frame update
     void Start()
