@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
         health = 100;
         hasKey = false;
         anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -68,16 +69,19 @@ public class PlayerMovement : MonoBehaviour
             if (collision.gameObject.name.Contains("Ogre"))
             {
                 health -= 50;
+                updateHealthBar();
                 print(health);
             }
             else if (collision.gameObject.name.Contains("Watcher"))
             {
                 health -= 12;
+                updateHealthBar();
                 print(health);
             }
             else 
             {
                 health -= 2;
+                updateHealthBar();
                 print(health);
             }
             if (health < 0)
@@ -91,8 +95,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.name.Contains("Heart"))
         {
             health += 70;
+            if (health > 200)
+                health = 200;
             Destroy(collision.gameObject);
             print(health);
+            updateHealthBar();
         }
 
         if (collision.name.Contains("Door"))
@@ -195,5 +202,9 @@ public class PlayerMovement : MonoBehaviour
     public int getHealth()
     {
         return health;
+    }
+    private void updateHealthBar()
+    {
+
     }
 }
