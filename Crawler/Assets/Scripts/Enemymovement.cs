@@ -16,7 +16,7 @@ public class Enemymovement : MonoBehaviour
     void Update()
     {
         float step = speed *Time.deltaTime;
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        target = GameObject.FindGameObjectWithTag("Player").transform; //push
         transform.position = Vector2.MoveTowards(transform.position, target.position, step);
     }
 }

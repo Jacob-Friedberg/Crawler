@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public int attack;
     private static bool start = false;
     
-    public Vector3 startLeft = new Vector3(-5.62f, 0.0f, 1.76f), startRight = new Vector3(5.62f, 0.0f, 1.76f), startTop = new Vector3(0.0f, 2.37f, 1.76f), startBottom = new Vector3(0.0f, -2.38f, 1.76f);
+    public Vector3 startLeft = new Vector3(-5.62f, 0.0f, 1.76f), startRight = new Vector3(5.62f, 0.0f, 1.6f), startTop = new Vector3(0.0f, 2.37f, 1.76f), startBottom = new Vector3(0.0f, -2.38f, 1.76f);
     // Start is called before the first frame update
     void Start()
     {
