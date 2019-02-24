@@ -129,7 +129,6 @@ public class PlayerMovement : MonoBehaviour
 
             if(collision.name.Contains("Boss") && hasKey)
             {
-                print("im here");
                 SceneManager.LoadScene("Level1-4");
                 this.transform.position = startLeft;
             }
@@ -188,5 +187,9 @@ public class PlayerMovement : MonoBehaviour
     static public void startGame()
     {
         start = true;
+    }
+    public int getHealth()
+    {
+        return health;
     }
 }
