@@ -77,10 +77,14 @@ public class PlayerMovement : MonoBehaviour
                 health -= 12;
                 updateHealthBar();
                 print(health);
+            } else if (collision.gameObject.name.Contains("Ghost"))
+            {
+                health -= 10;
+                print(health);
             }
             else 
             {
-                health -= 2;
+                health -= 5;
                 updateHealthBar();
                 print(health);
             }
